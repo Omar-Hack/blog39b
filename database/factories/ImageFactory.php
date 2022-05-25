@@ -20,7 +20,8 @@ class ImageFactory extends Factory
         return [
             'status'      => $this->faker->randomElement(['1', '2']),
             'post_id'     => Post::all()->random()->id,
-            'url'         => 'storage/post/' . $this->faker->image('public/storage/post', 480, 480, null,false),
+            'url'         => $this->faker->imageUrl(480, 480, null, false),
+            //'url'         => 'storage/post/' . $this->faker->image('public/storage/post', 480, 480, null,false),
         ];
     }
 }

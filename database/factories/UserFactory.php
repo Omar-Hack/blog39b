@@ -28,7 +28,8 @@ class UserFactory extends Factory
         return [
             'status'            => $this->faker->randomElement(['1', '2']),
             'name'              => $name,
-            'image'             => 'storage/post/' . $this->faker->image('public/storage/post', 480, 480, null,false),
+            'image'             => $this->faker->imageUrl(480, 480, null, false),
+            //'image'             => 'storage/post/' . $this->faker->image('public/storage/post', 480, 480, null,false),
             'password'          => Str::random(60), // password
             'email'             => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),

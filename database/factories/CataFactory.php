@@ -30,7 +30,8 @@ class CataFactory extends Factory
             'status'   => $this->faker->randomElement(['1', '2']),
             'title'    => $name,
             'slug'     => Str::slug($name),
-            'icon'     => 'storage/post/' . $this->faker->image('public/storage/post', 16, 16, null,false),
+            'icon'     => $this->faker->imageUrl(16, 16, null, false),
+            //'icon'     => 'storage/post/' . $this->faker->image('public/storage/post', 16, 16, null,false),
         ];
     }
 }
