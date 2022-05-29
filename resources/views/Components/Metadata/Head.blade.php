@@ -5,3 +5,4 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge, IE=11">
 <link rel="icon" href="{{ url('images/icon.png') }}" type="image/png">
 <title>@yield('title')</title>
+

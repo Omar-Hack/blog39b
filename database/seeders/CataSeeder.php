@@ -15,6 +15,6 @@ class CataSeeder extends Seeder
      */
     public function run()
     {
-        Cata::factory(10)->create();
+        Cata::factory(100)->create();
     }
 }
