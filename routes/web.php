@@ -8,7 +8,7 @@ use App\Http\Controllers\Public\PublicationsController;
 use App\Http\Controllers\Public\RegisterController;
 use App\Http\Controllers\Public\ShowPublicationsController;
 
-//Route::get('/', [BlogController::class, 'welcome_index'])->name('public.welcome.index');
+Route::get('/', [PublicationsController::class, 'show'])->name('public.welcome.index');
 Route::group(['prefix' => 'inicio'], function () {
 
     Route::get('publicaciones', [PublicationsController::class, 'show'])->name('public.publications.show');

@@ -11,6 +11,23 @@ use Illuminate\Http\Request;
 
 class PublicationsController extends Controller
 {
+    public function welcome(){
+        $posts = Post::where([
+            ['status', '1'],
+        ])->orderBy('id', 'Desc')
+        ->paginate(12);
+
+        $categories = Category::where([
+            ['status', '1'],
+        ])->orderBy('id', 'Desc')
+        ->get();
+
+        return view('Public.Publications.Home')->with([
+            'posts'      => $posts,
+            'categories' => $categories,
+        ]);
+    }
+
     public function show(){
         $posts = Post::where([
             ['status', '1'],
